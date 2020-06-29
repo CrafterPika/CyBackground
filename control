@@ -1,7 +1,7 @@
 Package: io.crafterpika.cybackground
 Name: CyBackground
 Depends: mobilesubstrate
-Version: 1.0.0
+Version: 1.0.1
 Architecture: iphoneos-arm
 Description:  Background Refresh Cydia?!
 Maintainer: CrafterPika
