@@ -18,9 +18,9 @@
 	completionHandler:nil];
 }
 
-- (void)respring {
+- (void)Apply {
     pid_t pid;
-    const char* args[] = {"killall", "backboardd", NULL};
+    const char* args[] = {"killall", "Cydia", NULL};
     posix_spawn(&pid, "/usr/bin/killall", NULL, NULL, (char* const*)args, NULL);
 }
 
