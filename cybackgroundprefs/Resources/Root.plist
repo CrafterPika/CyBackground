@@ -4,20 +4,6 @@
 <dict>
 	<key>items</key>
 	<array>
-	<dict>
-            <key>cell</key>
-            <string>PSGroupCell</string>
-            <key>footerText</key>
-            <string>The Tweak can be applied on-the-fly, but need to restart Cydia to take affect.</string>
-        </dict>
-		 <dict>
-			<key>cell</key>
-			<string>PSButtonCell</string>
-			<key>label</key>
-			<string>Apply to Cydia</string>
-			<key>action</key>
-			<string>Apply</string>
-		</dict>
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
@@ -40,7 +26,15 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Links</string>
+			<string>Other</string>
+		</dict>
+		 <dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Apply to Cydia</string>
+			<key>action</key>
+			<string>Apply</string>
 		</dict>
 		<dict>
 			<key>cell</key>
