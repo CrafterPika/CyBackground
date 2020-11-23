@@ -29,13 +29,16 @@ jobs:
       env:
         THEOS: theos
       run: make package
+
+    - name: Declare some variables
+      id: vars
+      shell: bash
+      run: |
+        echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
       
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.1
       with:
-        env:
-          git_hash=$(git rev-parse --short "$GITHUB_SHA")
-          git_branch=${GITHUB_REF##*/}
-        name: output-${git_branch}.${git_hash}
+        name: build-${{ steps.vars.outputs.sha_short }}
         path: packages
       
