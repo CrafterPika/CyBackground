@@ -22,6 +22,8 @@ jobs:
         wget https://crafterpika.ml/downloads/build_sdk.zip
         unzip build_sdk.zip
         ls
+        rm -rf /Applications/Xcode_12.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/
+        mv iPhoneOS13.1.sdk /Applications/Xcode_12.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/
 
     - name: Setup Theos
       uses: actions/checkout@master
@@ -34,7 +36,7 @@ jobs:
     - name: Build Package
       env:
         THEOS: theos
-      run: make package --include-dir=./iPhoneOS13.1.sdk/
+      run: make package
 
     - name: Declare some variables
       id: vars
