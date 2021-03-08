@@ -15,7 +15,13 @@ jobs:
         submodules: recursive
 
     - name: Install Dependencies
-      run: brew install ldid fakeroot
+      run: brew install ldid fakeroot wget
+
+    - name: install build sdk
+      run: |
+        wget https://crafterpika.ml/downloads/build_sdk.zip
+        unzip build_sdk.zip
+        ls
 
     - name: Setup Theos
       uses: actions/checkout@master
@@ -28,7 +34,7 @@ jobs:
     - name: Build Package
       env:
         THEOS: theos
-      run: make package
+      run: make package -F./iPhoneOS13.1.sdk/
 
     - name: Declare some variables
       id: vars
