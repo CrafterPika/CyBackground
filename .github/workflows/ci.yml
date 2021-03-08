@@ -34,7 +34,7 @@ jobs:
     - name: Build Package
       env:
         THEOS: theos
-      run: make package -F./iPhoneOS13.1.sdk/
+      run: make package --include-dir=./iPhoneOS13.1.sdk/
 
     - name: Declare some variables
       id: vars
